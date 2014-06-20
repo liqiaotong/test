@@ -93,4 +93,8 @@ public class BuyActivity extends Activity {
 		return goods;
 	}
 
+
+//test git context and update
+
+
 }
