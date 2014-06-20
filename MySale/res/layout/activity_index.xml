@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <!-- ViewPager -->
+
+        <LinearLayout 
+            android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:background="#FFFFFF" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#F7F7F7"
+                    android:text="首页" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#F7F7F7"
+                    android:text="热门" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#F7F7F7"
+                    android:text="类别" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#F7F7F7"
+                    android:text="新闻" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cursor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix"
+                android:src="@drawable/as" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vPager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:flipInterval="30"
+                android:persistentDrawingCache="animation" />
+            </LinearLayout>
+
+            <!-- EndViewPager -->
+
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.001"
+                android:background="#999" />
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:id="@+id/slidingdrawer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@id/handle"
+                android:layout_width="20dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/lts" />
+
+            <LinearLayout
+                android:id="@id/content"
+                android:layout_width="50dip"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dip"
+                        android:background="@drawable/android_titles" >
+
+                        <ImageView
+                            android:layout_width="50dip"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginTop="15dip"
+                            android:src="@drawable/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dip"
+                            android:layout_marginTop="40dip"
+                            android:text="@string/androidStore"
+                            android:textColor="#ffffff"
+                            android:textSize="20dip" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/indexbtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/menuitem"
+                        android:gravity="center_vertical"
+                        android:text="    商店首页"
+                        android:textSize="22dip" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/menuitem"
+                        android:gravity="center_vertical"
+                        android:text="    我的商品"
+                        android:textSize="22dip" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/menuitem"
+                        android:gravity="center_vertical"
+                        android:text="    购买的商品"
+                        android:textSize="22dip" />
+
+                    <Button
+                        android:id="@+id/indexList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/menuitem"
+                        android:gravity="center_vertical"
+                        android:text="    购物清单"
+                        android:textSize="22dip" />
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/menuitem"
+                        android:gravity="center_vertical"
+                        android:text="    关于"
+                        android:textColor="#999"
+                        android:textSize="22dip" />
+                    <!--
+                         <ListView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#999" />
+                    -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/loginBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:background="@drawable/greenbtn"
+                        android:text="@string/login"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/exitBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@drawable/greenbtn"
+                        android:text="@string/exit"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+        </SlidingDrawer>
+    </RelativeLayout>
+
+</LinearLayout>

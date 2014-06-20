@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+     >
+    
+        <Button 
+            android:layout_width="265dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="启动摄像头"
+            />
+        <Button 
+            android:layout_width="265dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="相册中选择"
+            />
+
+</LinearLayout>

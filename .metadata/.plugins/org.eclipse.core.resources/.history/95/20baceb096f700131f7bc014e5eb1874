@@ -1,0 +1,45 @@
+package com.ivali.meejian.common;
+
+import android.content.Context;
+import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+
+public class NonSwipeableViewPager extends ViewPager {
+
+	private boolean nonSwipeable = true;
+	
+    public NonSwipeableViewPager(Context context) {
+        super(context);
+    }
+
+    public NonSwipeableViewPager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent arg0) {
+    	if(nonSwipeable){
+            // Never allow swiping to switch between pages
+    		return false;
+    	}
+    	return false;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+    	if(nonSwipeable){
+            // Never allow swiping to switch between pages
+    		return false;
+    	}
+    	return false;
+    }
+    
+    public boolean getNonSwipeable(){
+    	return nonSwipeable;
+    }
+    
+    public void setNonSwipeable(boolean nonSwipeable){
+    	this.nonSwipeable = nonSwipeable;
+    }
+}

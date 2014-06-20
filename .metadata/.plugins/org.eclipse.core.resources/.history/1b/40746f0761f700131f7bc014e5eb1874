@@ -1,0 +1,13 @@
+package com.ivali.meejian.common;
+
+import android.content.Context;
+import android.widget.FrameLayout;
+
+public class test extends FrameLayout{
+
+	public test(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+
+}

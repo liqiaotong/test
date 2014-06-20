@@ -1,0 +1,170 @@
+package com.ivali.meejian.common;
+
+import com.ivali.meejian.R;
+
+import android.app.AlertDialog;
+import android.common.CommonPagerAdapter;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.util.AttributeSet;
+
+public class RegistAndLoginActivity extends BaseActivity {
+
+	private ViewPager mViewPager;
+	// 页面视图
+	private View mijian;
+	private View login;
+	private View resetPwd;
+	private View register;
+	private View setPhoto;
+	private View setPhotoMenuView;
+	private PopupWindow popupWindow;
+	LayoutInflater mlayoutInflater;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.activity_login_regist_show);
+		// 初始化视图
+		initView();
+		// 初始化视图点击事件
+		initViewListener();
+		// 初始化ViewPager
+		initViewPager();
+
+	}
+
+	private void initView() {
+		// TODO Auto-generated method stub
+		mlayoutInflater = LayoutInflater.from(this);
+		mijian = mlayoutInflater.inflate(R.layout.activity_mijian, null);
+		login = mlayoutInflater.inflate(R.layout.activity_login, null);
+		resetPwd = mlayoutInflater.inflate(R.layout.activity_resetpwd, null);
+		register = mlayoutInflater.inflate(R.layout.activity_register, null);
+		setPhoto = mlayoutInflater.inflate(R.layout.activity_setphoto, null);
+		setPhotoMenuView=mlayoutInflater.inflate(R.layout.activity_setphoto_menu, null);
+		
+	}
+
+	private void initViewListener() {
+		// TODO Auto-generated method stub
+
+		// 初始化mijian控件
+		Button mijianConfirm = (Button) mijian.findViewById(R.id.mijianConfrim);
+		EditText mijianNumber;
+		mijianNumber = (EditText) mijian.findViewById(R.id.mijianNumber);
+
+		// 初始化login控件
+		Button loginConfirm = (Button) login.findViewById(R.id.loginConfirm);
+		TextView loginForget = (TextView) login.findViewById(R.id.loginForget);
+		EditText loginPwd = (EditText) login.findViewById(R.id.loginPwd);
+		ImageView loginReturn = (ImageView) login
+				.findViewById(R.id.loginReturn);
+
+		// 初始化resetPwd控件
+		Button resetPwdConfirm = (Button) resetPwd
+				.findViewById(R.id.resetPwdConfirm);
+		ImageView resetPwdReturn = (ImageView) resetPwd
+				.findViewById(R.id.setPhotoReturn);
+		EditText resetPwdCaptcha = (EditText) resetPwd
+				.findViewById(R.id.resetPwdCaptcha);
+		Button resetPwdGetCaptcha = (Button) resetPwd
+				.findViewById(R.id.resetPwdGetCaptcha);
+		EditText resetPwdNewPwd = (EditText) resetPwd
+				.findViewById(R.id.resetPwdNewPwd);
+		
+		// 初始化register控件
+		Button registerNext = (Button) register.findViewById(R.id.registerNext);
+		ImageView registerReturn = (ImageView) register
+				.findViewById(R.id.resetPwdConfirm);
+		EditText registerCaptcha = (EditText) register
+				.findViewById(R.id.registerCaptcha);
+		Button registerGetCaptcha = (Button) register
+				.findViewById(R.id.registerGetCaptcha);
+		EditText registerPwd = (EditText) register
+				.findViewById(R.id.registerPwd);
+
+		// 初始化setPhoto控件
+		Button setPhotoConfirm = (Button) setPhoto
+				.findViewById(R.id.setPhotoConfirm);
+		ImageView setPhotoReturn = (ImageView) setPhoto
+				.findViewById(R.id.setPhotoReturn);
+		TextView setPhotoSkip = (TextView) setPhoto
+				.findViewById(R.id.setPhotoSkip);
+		ImageView setPhotoMenu = (ImageView) setPhoto
+				.findViewById(R.id.setPhotoMenu);
+		setPhotoMenu.setOnClickListener(new setPhotoMenuListener());
+
+		// 初始化setPhotoMenu控件
+		
+
+	}
+
+	private void initViewPager() {
+		// TODO Auto-generated method stub
+		mViewPager = (ViewPager) findViewById(R.id.registerAndValidateViewPager);
+		CommonPagerAdapter commonPagerAdapter = new CommonPagerAdapter(
+				RegistAndLoginActivity.this);
+		commonPagerAdapter.addView(mijian);
+		commonPagerAdapter.addView(login);
+		commonPagerAdapter.addView(resetPwd);
+		commonPagerAdapter.addView(register);
+		commonPagerAdapter.addView(setPhoto);
+		mViewPager.setAdapter(commonPagerAdapter);
+		mViewPager.setCurrentItem(0);
+	}
+
+	// 弹出头像设置菜单
+	class setPhotoMenuListener implements OnClickListener {
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			
+				popupWindow = new PopupWindow(setPhotoMenuView,LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT, true);
+				//设置背景颜色
+				popupWindow.setAnimationStyle(R.style.setPhotoMenu);
+				ColorDrawable color = new ColorDrawable(-00000);
+				popupWindow.setBackgroundDrawable(color);
+		        //设置控件宽度高度
+		        popupWindow.setWidth(LayoutParams.FILL_PARENT);    
+		        popupWindow.setHeight(LayoutParams.WRAP_CONTENT); 
+		        //控件的位置
+		        popupWindow.showAtLocation(setPhotoMenuView, Gravity.RIGHT | Gravity.BOTTOM, 0, 0);
+		        
+		        
+		        //控件的点击事件
+		        popupWindow.setTouchable(true);  
+		        popupWindow.setFocusable(true);
+		        popupWindow.update();
+		        //控件相对父窗体的位置
+		       // popupWindow.showAsDropDown(setPhoto,0,0);
+			
+		        
+			
+		}
+
+	}
+
+}

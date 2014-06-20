@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">MySale</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="name">账号</string>
+    <string name="pwd">密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="confirmPwd">确认密码</string>
+    <string name="cancel">返回</string>
+    <string name="infoInfo">详情</string>
+    <string name="indexMoney">售价</string>
+    <string name="indexName">游戏</string>
+    <string name="androidStore">Android Store</string>
+    <string name="tisRegister">还未注册账号？</string>
+    <string name="sreach">查找</string>
+    <string name="exit">退出</string>
+    <string name="androidInfo">Android Info</string>
+
+</resources>

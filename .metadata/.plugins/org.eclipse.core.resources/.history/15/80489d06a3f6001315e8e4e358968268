@@ -1,0 +1,14 @@
+package com.ivali.meejian.common;
+
+import android.common.CommonSession;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+
+public class BaseActivity extends FragmentActivity {
+
+    @Override
+    protected void onCreate(Bundle arg0){
+        CommonSession.init(this);
+        super.onCreate(arg0);
+    }
+}

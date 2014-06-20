@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_info_title" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:layout_weight="1"
+     android:orientation="vertical"
+         >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#E5E5E5"
+    android:orientation="horizontal"
+    >
+
+<LinearLayout
+    android:layout_width="195dp"
+    android:layout_height="235dp"
+    android:background="#E5E5E5" >
+
+    <ImageView
+        android:id="@+id/infoImage"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:layout_weight="1.88" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_marginTop="20dip"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_marginBottom="10dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/indexName"
+            android:textSize="23dip"
+            android:layout_marginRight="10dip"
+             />
+
+        <TextView
+            android:id="@+id/infoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lol"
+            android:textColor="#777" 
+            android:textSize="23dip"
+            android:layout_marginRight="10dip"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dip"
+         >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/indexMoney"
+            android:textSize="20dip"
+            android:layout_marginRight="10dip"
+            />
+
+        <TextView
+            android:id="@+id/infoMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$50"
+            android:textSize="20dip"
+            android:textColor="#777"
+            android:layout_marginRight="10dip"
+             />
+    </LinearLayout>
+
+   
+    
+</LinearLayout>
+</LinearLayout>
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+      android:layout_weight="2"
+     android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infoInfo" 
+            android:textSize="25dip"
+            android:layout_marginRight="10dip"
+            />
+
+        <TextView
+            android:id="@+id/infoInfo"
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:layout_weight="0.80"
+            android:text="info"
+            android:textColor="#777"
+            android:textSize="20dip" />
+
+    </LinearLayout>
+</LinearLayout>
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="购买"
+            android:background="@drawable/greenbtn"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/buyList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="我的清单"
+            android:background="@drawable/greenbtn"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>

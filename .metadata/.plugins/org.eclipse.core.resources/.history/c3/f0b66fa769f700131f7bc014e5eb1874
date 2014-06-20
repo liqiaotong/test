@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:background="@color/orangered" >
+
+        <ImageView
+            android:id="@+id/loginReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_launcher"
+            />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="登陆" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:layout_centerHorizontal="true"
+            >
+        
+        <LinearLayout
+            android:layout_width="265dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="10dip"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" />
+
+            <EditText
+                android:id="@+id/loginPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="输入您的密码完成登陆" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loginConfirm"
+            android:layout_width="265dip"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+        
+        <TextView 
+            android:id="@+id/loginForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dip"
+            android:text="忘记密码？"
+            />
+        
+    </LinearLayout>
+    
+        </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MeeJian</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="mijian">MIJIAN</string>
+    <string name="login">登陆</string>
+    <string name="resetPwd">重置密码</string>
+    <string name="registerAndValidate">注册验证</string>
+    <string name="setPwd">设置密码</string>
+    <string name="setphoto">设置头像</string>
+
+</resources>
